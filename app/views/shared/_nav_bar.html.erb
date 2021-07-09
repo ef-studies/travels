@@ -1,0 +1,26 @@
+<ul class="nav justify-content-end">
+  <li class="nav-item">
+    <%= link_to 'home', root_path, class: "nav-link" %>
+  </li>
+  <% if user_signed_in? %>
+    <li class="nav-item">
+      <%= link_to 'planejar viagem', root_path, class: "nav-link" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to 'histórico', root_path, class: "nav-link" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to 'perfil', root_path, class: "nav-link" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to 'logout', root_path, class: "nav-link" %>
+    </li>
+  <% else %>
+    <li class="nav-item">
+      <%= link_to 'registre-se', new_user_registration_path, class: "nav-link" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to 'login', new_user_session_path, class: "nav-link" %>
+    </li>
+  <% end %>
+</ul>
